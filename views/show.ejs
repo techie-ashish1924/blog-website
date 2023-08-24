@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <header>
+        <%-include('./navbar.ejs')%>
+    </header>
+
+    <div class="row products">
+
+       
+    
+            <div class="col-lg-4 mb-3">
+                <div class="card text-center shadow-lg mx-auto" style="width: 18rem;padding: 20px;margin: 25px;">
+                    <img src="<%=blog.img_url%>" class="card-img-top" alt="item image">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= blog.name %></h5>
+                      <p class="card-text"><%= blog.about %>...</p>
+                    </div>
+                    <a href="/blogs/<%=blog._id%>/edit" class="btn btn-in btn-sm">Edit</a>
+
+                    <form class="d-inline-block" action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+                      <button class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                  </div>
+            </div>
+    
+
+
+    
+</body>
+</html>

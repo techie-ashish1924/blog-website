@@ -1,0 +1,15 @@
+
+
+.mainclass{
+
+    padding : 20px 20px;
+    margin: 30px auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid brown;
+
+
+}
